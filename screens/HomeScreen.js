@@ -9,6 +9,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
+import * as Animatable from 'react-native-animatable';
 
 import { MonoText } from '../components/StyledText';
 
@@ -19,7 +20,7 @@ export default function HomeScreen() {
         style={styles.container}
         contentContainerStyle={styles.contentContainer}>
         <View style={styles.welcomeContainer}>
-          <Image
+          <Animatable.Image animation="slideInDown"
             source={
               __DEV__
                 ? require('../assets/images/crypto.png')
@@ -30,7 +31,6 @@ export default function HomeScreen() {
         </View>
 
         <View style={styles.getStartedContainer}>
-
           <Text style={styles.getStartedText}>
             Lista Crypto.ba servisa
           </Text>
@@ -38,40 +38,47 @@ export default function HomeScreen() {
 
         <View style={styles.helpContainer}>
           <TouchableOpacity onPress={handleGitPress} style={styles.helpLink}>
-            <Text style={styles.helpLinkText}>
-              git.crypto.ba
-            </Text>
+          
+          <Animatable.Image animation="slideInLeft"
+            source={require('../assets/images/buttons/button-git.png')}
+            style={styles.button}
+          />
           </TouchableOpacity>
           <TouchableOpacity onPress={handleCloudPress} style={styles.helpLink}>
-            <Text style={styles.helpLinkText}>
-              cloud.crypto.ba
-            </Text>
+          <Animatable.Image animation="slideInRight"
+            source={require('../assets/images/buttons/button-cloud.png')}
+            style={styles.button}
+          />
           </TouchableOpacity>
           <TouchableOpacity onPress={handleMarketPress} style={styles.helpLink}>
-            <Text style={styles.helpLinkText}>
-              market.crypto.ba
-            </Text>
+          <Animatable.Image animation="slideInLeft"
+            source={require('../assets/images/buttons/button-market.png')}
+            style={styles.button}
+          />
           </TouchableOpacity>
           <TouchableOpacity onPress={handleOfficePress} style={styles.helpLink}>
-            <Text style={styles.helpLinkText}>
-              office.crypto.ba
-            </Text>
+          <Animatable.Image animation="slideInRight"
+            source={require('../assets/images/buttons/button-office.png')}
+            style={styles.button}
+          />
+          </TouchableOpacity>
+          <TouchableOpacity onPress={handlePayPress} style={styles.helpLink}>
+          <Animatable.Image animation="slideInLeft"
+            source={require('../assets/images/buttons/button-pay.png')}
+            style={styles.button}
+          />
           </TouchableOpacity>
         </View>
       </ScrollView>
-
+{/* 
       <View style={styles.tabBarInfoContainer}>
-        <Text style={styles.tabBarInfoText}>
-          This is a tab bar. You can edit it in:
-        </Text>
-
         <View
           style={[styles.codeHighlightContainer, styles.navigationFilename]}>
           <MonoText style={styles.codeHighlightText}>
             navigation/MainTabNavigator.js
           </MonoText>
         </View>
-      </View>
+      </View> */}
     </View>
   );
 }
@@ -104,6 +111,12 @@ function handleOfficePress() {
   );
 }
 
+function handlePayPress() {
+  WebBrowser.openBrowserAsync(
+    'https://pay.crypto.ba'
+  );
+}
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -123,6 +136,13 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
     marginTop: 3,
     marginLeft: -10,
+  },
+  button: {
+    width: 200,
+    height: 50,
+    resizeMode: 'contain',
+    marginTop: 0,
+    marginLeft: 0,
   },
   getStartedContainer: {
     alignItems: 'center',
