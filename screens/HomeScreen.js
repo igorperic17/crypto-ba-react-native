@@ -19,36 +19,40 @@ export default function HomeScreen() {
       <ScrollView
         style={styles.container}
         contentContainerStyle={styles.contentContainer}>
-        <View style={styles.welcomeContainer}>
+        <View style={styles.headerLogoView}>
           <Animatable.Image animation="slideInDown"
             source={
               __DEV__
-                ? require('../assets/images/crypto.png')
-                : require('../assets/images/crypto.png')
+                ? require('../assets/images/logo-crypto-ba.png')
+                : require('../assets/images/logo-crypto-ba.png')
             }
-            style={styles.welcomeImage}
+            style={styles.headerLogo}
           />
         </View>
 
-        <View style={styles.getStartedContainer}>
-          <Text style={styles.getStartedText}>
-            Lista Crypto.ba servisa
+        <Image style={styles.headerImageNodes} source={require('../assets/images/nodes-background.png')}></Image>
+
+        <View style={styles.typerBackgroundStripe}></View>
+
+        <View style={styles.pageHeaderContainer}>
+          <Text style={styles.pageHeaderText}>
+            RXC ecosystem
           </Text>
         </View>
 
-        <View style={styles.helpContainer}>
+        <View style={styles.buttonContainer}>
           <TouchableOpacity onPress={handleGitPress} style={styles.helpLink}>
-          
-          <Animatable.Image animation="slideInLeft"
-            source={require('../assets/images/buttons/button-git.png')}
-            style={styles.button}
-          />
+            <Animatable.Image animation="slideInLeft"
+              source={require('../assets/images/buttons/button-git.png')}
+              style={styles.button}
+            />
           </TouchableOpacity>
+
           <TouchableOpacity onPress={handleCloudPress} style={styles.helpLink}>
-          <Animatable.Image animation="slideInRight"
-            source={require('../assets/images/buttons/button-cloud.png')}
-            style={styles.button}
-          />
+            <Animatable.Image animation="slideInRight"
+              source={require('../assets/images/buttons/button-cloud.png')}
+              style={styles.button}
+            />
           </TouchableOpacity>
           <TouchableOpacity onPress={handleMarketPress} style={styles.helpLink}>
           <Animatable.Image animation="slideInLeft"
@@ -70,8 +74,8 @@ export default function HomeScreen() {
           </TouchableOpacity>
         </View>
       </ScrollView>
-{/* 
-      <View style={styles.tabBarInfoContainer}>
+
+      {/* <View style={styles.tabBarInfoContainer}>
         <View
           style={[styles.codeHighlightContainer, styles.navigationFilename]}>
           <MonoText style={styles.codeHighlightText}>
@@ -120,22 +124,34 @@ function handlePayPress() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#00091A',
   },
   contentContainer: {
     paddingTop: 30,
   },
-  welcomeContainer: {
+  headerLogoView: {
     alignItems: 'center',
     marginTop: 10,
     marginBottom: 20,
   },
-  welcomeImage: {
+  headerLogo: {
     width: 200,
-    height: 160,
+    height: 100,
     resizeMode: 'contain',
     marginTop: 3,
     marginLeft: -10,
+  },
+  headerImageNodes: {
+    position: 'absolute',
+    top: 0,
+    width: '100%',
+    height: 300,
+    zIndex: -1
+  },
+  typerBackgroundStripe: {
+    backgroundColor: 'rgba(0,0,0,0.7)',
+    width: '100%',
+    height: 60
   },
   button: {
     width: 200,
@@ -144,7 +160,7 @@ const styles = StyleSheet.create({
     marginTop: 0,
     marginLeft: 0,
   },
-  getStartedContainer: {
+  pageHeaderContainer: {
     alignItems: 'center',
     marginHorizontal: 50,
   },
@@ -159,17 +175,20 @@ const styles = StyleSheet.create({
     borderRadius: 3,
     paddingHorizontal: 4,
   },
-  getStartedText: {
-    fontSize: 17,
-    color: 'rgba(96,100,109, 1)',
+  pageHeaderText: {
+    fontSize: 24,
+    color: 'white',
     lineHeight: 24,
     textAlign: 'center',
+    fontFamily: 'Menlo',
+    top: 100
   },
   tabBarInfoContainer: {
-    position: 'absolute',
+    // position: 'absolute',
     bottom: 0,
     left: 0,
     right: 0,
+    top: 100,
     ...Platform.select({
       ios: {
         shadowColor: 'black',
@@ -193,8 +212,8 @@ const styles = StyleSheet.create({
   navigationFilename: {
     marginTop: 5,
   },
-  helpContainer: {
-    marginTop: 15,
+  buttonContainer: {
+    marginTop: 150,
     alignItems: 'center',
   },
   helpLink: {
