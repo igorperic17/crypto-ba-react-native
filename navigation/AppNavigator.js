@@ -1,12 +1,22 @@
 import React from 'react';
-import { createAppContainer, createSwitchNavigator } from 'react-navigation';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import MainTabNavigator from './MainTabNavigator';
+import TabBarIcon from '../components/TabBarIcon';
+import HomeScreen from '../screens/HomeScreen';
+import SettingsScreen from '../screens/SettingsScreen';
 
-export default createAppContainer(
-  createSwitchNavigator({
-    // You could add another route here for authentication.
-    // Read more at https://reactnavigation.org/docs/en/auth-flow.html
-    Main: MainTabNavigator,
-  })
-);
+const AppNavigator = () => {
+
+  const MainTabNavigator = createBottomTabNavigator();
+
+  return (
+    <NavigationContainer>
+      <MainTabNavigator.Navigator>
+        <MainTabNavigator.Screen name="Servises" component={HomeScreen}/>
+        <MainTabNavigator.Screen name="About us" component={SettingsScreen}/>
+      </MainTabNavigator.Navigator>
+    </NavigationContainer>
+  )
+}
+
+export default AppNavigator;

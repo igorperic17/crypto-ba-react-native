@@ -26,10 +26,13 @@ export default function App(props) {
     );
   } else {
     return (
+      <>
+      <StatusBar barStyle="light-content" />
       <View style={styles.container}>
         {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
         <AppNavigator />
       </View>
+      </>
     );
   }
 }
