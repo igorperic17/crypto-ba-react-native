@@ -34,34 +34,31 @@ export default function HomeScreen() {
 
         <View style={styles.pageHeaderContainer}>
           <Text style={styles.pageHeaderText}>
-            RXC ecosystem
+            services
           </Text>
         </View>
 
         <View style={styles.buttonContainer}>
-          <MainButton 
-            buttonImage={require('../assets/images/icons/git.png')}
-            buttonText={'git'}
-            onPressHandler={handleGitPress} />
-          <MainButton 
-            buttonImage={require('../assets/images/icons/cloud-image.png')}
-            buttonText={'cloud'}
-            onPressHandler={handleCloudPress} />
-          
-          <MainButton 
-            buttonImage={require('../assets/images/icons/market-image.png')}
-            buttonText={'market'}
-            onPressHandler={handleMarketPress} />
 
-          <MainButton 
-            buttonImage={require('../assets/images/icons/office-image.png')}
-            buttonText={'office'}
-            onPressHandler={handleOfficePress} />
+        <MainButton 
+          buttonImage={require('../assets/images/icons/forum-image.png')}
+          buttonText={'forum'}
+          onPressHandler={handleForumPress} />
 
-            <MainButton 
-              buttonImage={require('../assets/images/icons/pay-image.png')}
-              buttonText={'pay'}
-              onPressHandler={handlePayPress} />
+        <MainButton 
+          buttonImage={require('../assets/images/icons/cloud-image.png')}
+          buttonText={'cloud'}
+          onPressHandler={handleCloudPress} />
+
+        <MainButton 
+          buttonImage={require('../assets/images/icons/office-image.png')}
+          buttonText={'email'}
+          onPressHandler={handleOfficePress} />
+        
+        <MainButton 
+          buttonImage={require('../assets/images/icons/git.png')}
+          buttonText={'git'}
+          onPressHandler={handleGitPress} />
 
         </View>
       </ScrollView>
@@ -86,7 +83,7 @@ function handleCloudPress() {
   );
 }
 
-function handleMarketPress() {
+function handleForumPress() {
   WebBrowser.openBrowserAsync(
     'https://market.crypto.ba'
   );
@@ -95,12 +92,6 @@ function handleMarketPress() {
 function handleOfficePress() {
   WebBrowser.openBrowserAsync(
     'https://office.crypto.ba'
-  );
-}
-
-function handlePayPress() {
-  WebBrowser.openBrowserAsync(
-    'https://pay.crypto.ba'
   );
 }
 
