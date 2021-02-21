@@ -7,35 +7,47 @@ import ServicesScreen from '../screens/ServicesScreen';
 import RxcScreen from '../screens/RxcScreen';
 import AboutUsScreen from '../screens/AboutUsScreen';
 
+import { StyleSheet } from 'react-native';
+
 const AppNavigator = () => {
 
   const MainTabNavigator = createBottomTabNavigator();
 
   return (
-    <NavigationContainer>
+    <NavigationContainer style={styles.container}>
       <MainTabNavigator.Navigator 
+      initialRouteName="services"
       screenOptions={ ({ route }) => ({
-        tabBrarIcon: ({ color }) => {
+        tabBarIcon: ({ color }) => {
           let icon;
-          if (route.name === 'Services') {
-            icon = 'S';
-          } else if (route.name === 'About Us') {
-            icon = 'A';
+          if (route.name === 'services') {
+            icon = require('../assets/images/icons/services-layer.png');
+          } else if (route.name === 'rxc') {
+            icon = require('../assets/images/icons/crypto-ba-logo.png');
+          } else if (route.name === 'about us') {
+            icon = require('../assets/images/icons/about.png');
           }
-          return <TabBarIcon name={route.name}></TabBarIcon>
-          // return <Text style={{color: color}}>{icon}</Text>
-        }
+          return <TabBarIcon text={route.name} image={icon}></TabBarIcon>
+        },
       })}
       tabBarOptions={{
         activeTintColor: 'tomato',
         inactiveTintColor: 'gray',
         activeBackgroundColor: '#111A2B',
         inactiveBackgroundColor: '#00091A',
+        safeAreaInsets: {
+          bottom: 0,
+        },
+        showLabel: false,
+        style: {
+          height: 80,
+          borderTopWidth: 2
+        }
       }}
       >
-        <MainTabNavigator.Screen name="Services" component={ServicesScreen}/>
-        <MainTabNavigator.Screen name="RXC" component={RxcScreen}/>
-        <MainTabNavigator.Screen name="About us" component={AboutUsScreen}/>
+        <MainTabNavigator.Screen name="services" component={ServicesScreen}/>
+        <MainTabNavigator.Screen name="rxc" component={RxcScreen}/>
+        <MainTabNavigator.Screen name="about us" component={AboutUsScreen}/>
       </MainTabNavigator.Navigator>
     </NavigationContainer>
   )
@@ -43,6 +55,9 @@ const AppNavigator = () => {
 
 export default AppNavigator;
 
-// const styles = StyleSheet.create({
-  
-// });
+const styles = StyleSheet.create({
+  container: {
+    // backgroundColor: 'blue'
+    height: 100
+  }
+});
