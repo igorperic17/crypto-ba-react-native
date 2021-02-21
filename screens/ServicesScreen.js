@@ -1,4 +1,5 @@
 import React from 'react';
+import * as WebBrowser from 'expo-web-browser';
 import {
   Image,
   Platform,
@@ -79,19 +80,19 @@ function handleGitPress() {
 
 function handleCloudPress() {
   WebBrowser.openBrowserAsync(
-    'https://cloud.crypto.ba'
+    'https://oblak.crypto.ba'
   );
 }
 
 function handleForumPress() {
   WebBrowser.openBrowserAsync(
-    'https://market.crypto.ba'
+    'https://crypto.ba'
   );
 }
 
 function handleOfficePress() {
   WebBrowser.openBrowserAsync(
-    'https://office.crypto.ba'
+    'https://email.crypto.ba'
   );
 }
 

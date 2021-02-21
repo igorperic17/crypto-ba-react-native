@@ -1,4 +1,5 @@
 import React from 'react';
+import * as WebBrowser from 'expo-web-browser';
 import {
   Image,
   Platform,
@@ -41,6 +42,10 @@ export default function HomeScreen() {
         <View style={styles.buttonContainer}>
           
         <MainButton 
+          buttonImage={require('../assets/images/icons/crypto-ba-logo.png')}
+          buttonText={'rxc'}
+          onPressHandler={handleRxcPress} />
+        <MainButton 
           buttonImage={require('../assets/images/icons/pay-image.png')}
           buttonText={'pay'}
           onPressHandler={handlePayPress} />
@@ -63,21 +68,28 @@ export default function HomeScreen() {
 HomeScreen.navigationOptions = {
   header: null,
 };
+
+function handleRxcPress() {
+  WebBrowser.openBrowserAsync(
+    'https://rxc.crypto.ba'
+  );
+}
+
 function handleGamesPress() {
   WebBrowser.openBrowserAsync(
-    'https://cloud.crypto.ba'
+    'https://rxcgames.com'
   );
 }
 
 function handleMarketPress() {
   WebBrowser.openBrowserAsync(
-    'https://market.crypto.ba'
+    'https://rxcmarket.com'
   );
 }
 
 function handlePayPress() {
   WebBrowser.openBrowserAsync(
-    'https://pay.crypto.ba'
+    'https://rxcpay.crypto.ba'
   );
 }
 
