@@ -10,6 +10,7 @@ import {
   View,
 } from 'react-native';
 import * as Animatable from 'react-native-animatable';
+import MainButton from '../components/MainButton';
 
 import { MonoText } from '../components/StyledText';
 
@@ -41,48 +42,33 @@ export default function HomeScreen() {
         </View>
 
         <View style={styles.buttonContainer}>
-          <TouchableOpacity onPress={handleGitPress} style={styles.helpLink}>
-            <Animatable.Image animation="slideInLeft"
-              source={require('../assets/images/buttons/button-git.png')}
-              style={styles.button}
-            />
-          </TouchableOpacity>
+          <MainButton 
+            buttonImage={require('../assets/images/icons/git.png')}
+            buttonText={'git'}
+            onPressHandler={handleGitPress} />
+          <MainButton 
+            buttonImage={require('../assets/images/icons/cloud-image.png')}
+            buttonText={'cloud'}
+            onPressHandler={handleCloudPress} />
+          
+          <MainButton 
+            buttonImage={require('../assets/images/icons/market-image.png')}
+            buttonText={'market'}
+            onPressHandler={handleMarketPress} />
 
-          <TouchableOpacity onPress={handleCloudPress} style={styles.helpLink}>
-            <Animatable.Image animation="slideInRight"
-              source={require('../assets/images/buttons/button-cloud.png')}
-              style={styles.button}
-            />
-          </TouchableOpacity>
-          <TouchableOpacity onPress={handleMarketPress} style={styles.helpLink}>
-          <Animatable.Image animation="slideInLeft"
-            source={require('../assets/images/buttons/button-market.png')}
-            style={styles.button}
-          />
-          </TouchableOpacity>
-          <TouchableOpacity onPress={handleOfficePress} style={styles.helpLink}>
-          <Animatable.Image animation="slideInRight"
-            source={require('../assets/images/buttons/button-office.png')}
-            style={styles.button}
-          />
-          </TouchableOpacity>
-          <TouchableOpacity onPress={handlePayPress} style={styles.helpLink}>
-          <Animatable.Image animation="slideInLeft"
-            source={require('../assets/images/buttons/button-pay.png')}
-            style={styles.button}
-          />
-          </TouchableOpacity>
+          <MainButton 
+            buttonImage={require('../assets/images/icons/office-image.png')}
+            buttonText={'office'}
+            onPressHandler={handleOfficePress} />
+
+            <MainButton 
+              buttonImage={require('../assets/images/icons/pay-image.png')}
+              buttonText={'pay'}
+              onPressHandler={handlePayPress} />
+
         </View>
       </ScrollView>
 
-      {/* <View style={styles.tabBarInfoContainer}>
-        <View
-          style={[styles.codeHighlightContainer, styles.navigationFilename]}>
-          <MonoText style={styles.codeHighlightText}>
-            navigation/MainTabNavigator.js
-          </MonoText>
-        </View>
-      </View> */}
     </View>
   );
 }

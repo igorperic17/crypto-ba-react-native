@@ -4,11 +4,17 @@ import * as Font from 'expo-font';
 import React, { useState } from 'react';
 import { Platform, StatusBar, StyleSheet, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import { Clipboard } from 'react-native'
 
 import AppNavigator from './navigation/AppNavigator';
 
 export default function App(props) {
   const [isLoadingComplete, setLoadingComplete] = useState(false);
+
+  // HACK: Prevent "Expo pasted from CoreSimulator" notification from spamming continuously
+  if (__DEV__) {
+    Clipboard.setString('')
+  }
 
   if (!isLoadingComplete && !props.skipLoadingScreen) {
     return (
