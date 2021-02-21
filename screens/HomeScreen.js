@@ -1,4 +1,3 @@
-import * as WebBrowser from 'expo-web-browser';
 import React from 'react';
 import {
   Image,
@@ -11,8 +10,6 @@ import {
 } from 'react-native';
 import * as Animatable from 'react-native-animatable';
 import MainButton from '../components/MainButton';
-
-import { MonoText } from '../components/StyledText';
 
 export default function HomeScreen() {
   return (

@@ -4,7 +4,6 @@ import { StyleSheet, Text, Image } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 export default function MainButton({ buttonImage, buttonText, onPressHandler}) {
-    console.log(onPressHandler);
     return (
         <TouchableOpacity style={styles.container} onPress={onPressHandler}>
             <View style={styles.buttonContentView}>

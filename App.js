@@ -1,4 +1,5 @@
-import { AppLoading } from 'expo-app-loading';
+
+import AppLoading from 'expo-app-loading';
 import { Asset } from 'expo-asset';
 import * as Font from 'expo-font';
 import React, { useState } from 'react';
@@ -29,6 +30,7 @@ export default function App(props) {
       <>
       <View style={styles.container}>
         {Platform.OS === 'ios' && <StatusBar barStyle="light-content" />}
+        
         <AppNavigator />
       </View>
       </>
