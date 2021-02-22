@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     height: 50,
     alignItems: 'center',
     justifyContent: 'center',
-    width: 200,
+    width: 220,
     borderRadius: 100,
     backgroundColor: 'white',
     shadowColor: 'white',
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
    },
    buttonContentView: {
     flex: 1,
-    width: '50%',
+    width: '55%',
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     height: 40,
     width: 40,
     resizeMode: 'contain',
-    margin: 10
+    margin: 5
    },
    buttonText: {
     fontFamily: 'Menlo',

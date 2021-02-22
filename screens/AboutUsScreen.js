@@ -9,7 +9,9 @@ import {
   View,
 } from 'react-native';
 import * as Animatable from 'react-native-animatable';
-import MainButton from '../components/MainButton';
+// import MainButton from '../components/MainButton';
+
+import TypeWriter from 'react-native-typewriter'
 
 export default function HomeScreen() {
   return (
@@ -30,7 +32,11 @@ export default function HomeScreen() {
 
         <Image style={styles.headerImageNodes} source={require('../assets/images/nodes-background.png')}></Image>
 
-        <View style={styles.typerBackgroundStripe}></View>
+        <View style={styles.typerBackgroundStripe}>
+          <TypeWriter typing={1} 
+          initialDelay={300} 
+          style={styles.typewriterText}>The first Balkan crypto community</TypeWriter>
+        </View>
 
         <View style={styles.pageHeaderContainer}>
           <Text style={styles.pageHeaderText}>
@@ -50,7 +56,7 @@ export default function HomeScreen() {
             flag scammers and suspicios crypto {"\n"}
             projects, help each other spin up {"\n"}
             new masternodes, set up mining {"\n"}
-            uquipment, discuss trading {"\n"}
+            equipment, discuss trading {"\n"}
             strategies and more!{"\n"}
             {"\n"}
             We are here for the tech.{"\n"}
@@ -130,7 +136,15 @@ const styles = StyleSheet.create({
   typerBackgroundStripe: {
     backgroundColor: 'rgba(0,0,0,0.7)',
     width: '100%',
-    height: 60
+    height: 60,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  typewriterText: {
+    fontSize: 16,
+    fontFamily: 'Menlo',
+    color: 'white',
+    fontWeight: 'bold'
   },
   button: {
     width: 200,

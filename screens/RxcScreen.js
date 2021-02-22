@@ -12,6 +12,8 @@ import {
 import * as Animatable from 'react-native-animatable';
 import MainButton from '../components/MainButton';
 
+import TypeWriter from 'react-native-typewriter'
+
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
@@ -31,7 +33,11 @@ export default function HomeScreen() {
 
         <Image style={styles.headerImageNodes} source={require('../assets/images/nodes-background.png')}></Image>
 
-        <View style={styles.typerBackgroundStripe}></View>
+        <View style={styles.typerBackgroundStripe}>
+          <TypeWriter typing={1} 
+          initialDelay={300} 
+          style={styles.typewriterText}>Learn the basics of blockchain tech</TypeWriter>
+        </View>
 
         <View style={styles.pageHeaderContainer}>
           <Text style={styles.pageHeaderText}>
@@ -45,6 +51,14 @@ export default function HomeScreen() {
           buttonImage={require('../assets/images/icons/crypto-ba-logo.png')}
           buttonText={'rxc'}
           onPressHandler={handleRxcPress} />
+        <MainButton 
+          buttonImage={require('../assets/images/icons/wallet-image.png')}
+          buttonText={'wallet'}
+          onPressHandler={handleWalletPress} />
+        <MainButton 
+          buttonImage={require('../assets/images/icons/explorer-image.png')}
+          buttonText={'explorer'}
+          onPressHandler={handleExplorerPress} />
         <MainButton 
           buttonImage={require('../assets/images/icons/pay-image.png')}
           buttonText={'pay'}
@@ -72,6 +86,18 @@ HomeScreen.navigationOptions = {
 function handleRxcPress() {
   WebBrowser.openBrowserAsync(
     'https://rxc.crypto.ba'
+  );
+}
+
+function handleWalletPress() {
+  WebBrowser.openBrowserAsync(
+    'https://wallet.crypto.ba'
+  );
+}
+
+function handleExplorerPress() {
+  WebBrowser.openBrowserAsync(
+    'https://explorer.crypto.ba'
   );
 }
 
@@ -123,7 +149,15 @@ const styles = StyleSheet.create({
   typerBackgroundStripe: {
     backgroundColor: 'rgba(0,0,0,0.7)',
     width: '100%',
-    height: 60
+    height: 60,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  typewriterText: {
+    fontSize: 16,
+    fontFamily: 'Menlo',
+    color: 'white',
+    fontWeight: 'bold'
   },
   button: {
     width: 200,
