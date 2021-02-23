@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     margin: 5
    },
    buttonText: {
-    fontFamily: 'Menlo',
+    fontFamily: 'Menlo-Regular',
     textAlign: 'center',
     width: '100%',
     fontSize: 24,
