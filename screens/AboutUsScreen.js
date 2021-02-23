@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
   contentText: {
     color: 'white',
     textAlign: 'right',
-    fontSize: 18,
+    fontSize: 16,
     fontFamily: 'Menlo-Regular'
   }
 });

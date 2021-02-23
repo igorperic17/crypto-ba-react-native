@@ -14,19 +14,13 @@ import TypeWriter from 'react-native-typewriter'
 export default function MainScreen(props) {
   return (
     <View style={styles.container}>
-      <ScrollView
-        style={styles.container}
-        contentContainerStyle={styles.contentContainer}>
+      <ScrollView contentContainerStyle={styles.contentContainer}>
 
         <Image style={styles.headerImageNodes} source={require('../assets/images/nodes-background.png')}></Image>
         
         <View style={styles.headerLogoView}>
           <Animatable.Image animation="slideInDown"
-            source={
-              __DEV__
-                ? require('../assets/images/logo-crypto-ba.png')
-                : require('../assets/images/logo-crypto-ba.png')
-            }
+            source={require('../assets/images/logo-crypto-ba.png')}
             style={styles.headerLogo}
           />
         </View>
@@ -46,6 +40,7 @@ export default function MainScreen(props) {
         <View style={styles.buttonContainer}>
             {props.children}
         </View>
+
       </ScrollView>
 
     </View>
@@ -62,10 +57,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#00091A',
   },
   contentContainer: {
+    flex: 1,
     paddingTop: 30,
     flexDirection: 'column',
     alignItems: 'stretch',
-    justifyContent: 'flex-start'
+    justifyContent: 'center'
   },
   headerLogoView: {
     alignItems: 'center',
@@ -95,59 +91,20 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontFamily: 'Menlo-Regular',
     color: 'white',
-    fontWeight: 'bold'
-  },
-  button: {
-    width: 200,
-    height: 50,
-    resizeMode: 'contain',
-    marginTop: 0,
-    marginLeft: 0,
-  },
-  codeHighlightContainer: {
-    backgroundColor: 'rgba(0,0,0,0.05)',
-    borderRadius: 3,
-    paddingHorizontal: 4,
   },
   pageHeaderText: {
     fontSize: 24,
     color: 'white',
-    lineHeight: 24,
+    // lineHeight: 24,
     textAlign: 'center',
     fontFamily: 'Menlo-Regular',
-    top: 100
-  },
-  tabBarInfoContainer: {
-    // position: 'absolute',
-    bottom: 0,
-    left: 0,
-    right: 0,
-    top: 100,
-    ...Platform.select({
-      ios: {
-        shadowColor: 'black',
-        shadowOffset: { width: 0, height: -3 },
-        shadowOpacity: 0.1,
-        shadowRadius: 3,
-      },
-      android: {
-        elevation: 20,
-      },
-    }),
-    alignItems: 'center',
-    backgroundColor: '#fbfbfb',
-    paddingVertical: 20,
-  },
-  tabBarInfoText: {
-    fontSize: 17,
-    color: 'rgba(96,100,109, 1)',
-    textAlign: 'center',
-  },
-  navigationFilename: {
-    marginTop: 5,
+    top: 20
   },
   buttonContainer: {
-    marginTop: 150,
+    flex: 1,
+    marginTop: 20,
     alignItems: 'center',
-  }
+    justifyContent: 'center',
+    // maxHeight: 500
+  },
 });

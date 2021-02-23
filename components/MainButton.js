@@ -17,7 +17,7 @@ export default function MainButton({ buttonImage, buttonText, onPressHandler}) {
 const styles = StyleSheet.create({
    container: {
     // flex: 1,
-    margin: 10,
+    margin: 3,
     height: 50,
     alignItems: 'center',
     justifyContent: 'center',
