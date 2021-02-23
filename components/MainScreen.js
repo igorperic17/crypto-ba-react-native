@@ -17,6 +17,9 @@ export default function MainScreen(props) {
       <ScrollView
         style={styles.container}
         contentContainerStyle={styles.contentContainer}>
+
+        <Image style={styles.headerImageNodes} source={require('../assets/images/nodes-background.png')}></Image>
+        
         <View style={styles.headerLogoView}>
           <Animatable.Image animation="slideInDown"
             source={
@@ -27,8 +30,6 @@ export default function MainScreen(props) {
             style={styles.headerLogo}
           />
         </View>
-
-        <Image style={styles.headerImageNodes} source={require('../assets/images/nodes-background.png')}></Image>
 
         <View style={styles.typerBackgroundStripe}>
           <TypeWriter typing={1} 
@@ -62,6 +63,9 @@ const styles = StyleSheet.create({
   },
   contentContainer: {
     paddingTop: 30,
+    flexDirection: 'column',
+    alignItems: 'stretch',
+    justifyContent: 'flex-start'
   },
   headerLogoView: {
     alignItems: 'center',
@@ -70,16 +74,14 @@ const styles = StyleSheet.create({
   },
   headerLogo: {
     width: 200,
-    height: 100,
+    height: 50,
     resizeMode: 'contain',
-    marginTop: 3,
-    marginLeft: -10,
   },
   headerImageNodes: {
     position: 'absolute',
     top: 0,
     width: '100%',
-    height: 300,
+    height: 210,
     zIndex: -1
   },
   typerBackgroundStripe: {
@@ -101,16 +103,6 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
     marginTop: 0,
     marginLeft: 0,
-  },
-  pageHeaderContainer: {
-    alignItems: 'center',
-    marginHorizontal: 50,
-  },
-  homeScreenFilename: {
-    marginVertical: 7,
-  },
-  codeHighlightText: {
-    color: 'rgba(96,100,109, 0.8)',
   },
   codeHighlightContainer: {
     backgroundColor: 'rgba(0,0,0,0.05)',
