@@ -94,17 +94,21 @@ const styles = StyleSheet.create({
   },
   pageHeaderText: {
     fontSize: 24,
-    color: 'white',
-    // lineHeight: 24,
+    color: '#00091A',
     textAlign: 'center',
     fontFamily: 'Menlo-Regular',
-    top: 20
+  },
+  pageHeaderContainer: {
+    marginTop: 40,
+    height: 30,
+    backgroundColor: 'rgba(255,255,255,0.8)',
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   buttonContainer: {
     flex: 1,
-    marginTop: 20,
+    marginTop: 10,
     alignItems: 'center',
     justifyContent: 'center',
-    // maxHeight: 500
   },
 });

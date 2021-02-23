@@ -7,7 +7,7 @@ import ServicesScreen from '../screens/ServicesScreen';
 import RxcScreen from '../screens/RxcScreen';
 import AboutUsScreen from '../screens/AboutUsScreen';
 
-import { StyleSheet } from 'react-native';
+import { Platform, StyleSheet } from 'react-native';
 
 const AppNavigator = () => {
 
@@ -40,7 +40,14 @@ const AppNavigator = () => {
         },
         showLabel: false,
         style: {
-          height: 80,
+          ...Platform.select({
+            ios: {
+              height: 90
+            },
+            android: {
+              height: 60
+            }
+          }),
           borderTopWidth: 2
         }
       }}
