@@ -16,7 +16,7 @@ export default function HomeScreen() {
             blockchain technologies.{"\n"}
             {"\n"}
             We share news, discuss algorithms,{"\n"}
-            flag scammers and suspicios crypto {"\n"}
+            flag scammers and suspicious crypto {"\n"}
             projects, help each other spin up {"\n"}
             new masternodes, set up mining {"\n"}
             equipment, discuss trading {"\n"}

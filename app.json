@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Crypto.ba App",
+    "name": "Crypto.ba Dashboard",
     "slug": "cryptoba",
     "privacy": "public",
     "platforms": [
@@ -28,7 +28,8 @@
     },
     "android": {
       "package": "com.develoco.cryptoba",
-      "versionCode": 1
+      "versionCode": 2,
+      "permissions": []
     },
     "description": "Crypto.ba is a Balkan community of crypto enthusiasts, helping each other learn fundamentals of blockchain technologies. We share news, discuss algorithms, flag scammers and suspicios crypto projects, help each other spin up new masternodes, set up mining equipment, discuss trading strategies and more! We are here for the tech. Seriously."
   }
