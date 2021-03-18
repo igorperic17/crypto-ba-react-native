@@ -31,6 +31,6 @@ const styles = StyleSheet.create({
     margin: 5,
     color: 'white',
     textAlignVertical: 'center',
-    fontFamily: 'Menlo-Regular'
+    fontFamily: 'Menlo-Regular',
   }
 });
