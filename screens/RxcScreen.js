@@ -15,10 +15,6 @@ export default function RxcScreen() {
           buttonText={'rxc'}
           onPressHandler={handleRxcPress} />
         <MainButton 
-          buttonImage={require('../assets/images/icons/wallet-image.png')}
-          buttonText={'wallet'}
-          onPressHandler={handleWalletPress} />
-        <MainButton 
           buttonImage={require('../assets/images/icons/explorer-image.png')}
           buttonText={'explorer'}
           onPressHandler={handleExplorerPress} />
@@ -57,7 +53,7 @@ function handleWalletPress() {
 
 function handleExplorerPress() {
   WebBrowser.openBrowserAsync(
-    'https://explorer.crypto.ba'
+    'https://rxcinfo.crypto.ba/'
   );
 }
 
