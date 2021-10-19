@@ -4,52 +4,60 @@ import MainButton from '../components/MainButton';
 import MainScreen from '../components/MainScreen';
 
 export default function HomeScreen() {
-  return (
-    <MainScreen screenTitle='services' typewriterText='Connect with crypto enthusiasts'>
-        <MainButton 
-          buttonImage={require('../assets/images/icons/forum-image.png')}
-          buttonText={'forum'}
-          onPressHandler={handleForumPress} />
-        <MainButton 
-          buttonImage={require('../assets/images/icons/cloud-image.png')}
-          buttonText={'cloud'}
-          onPressHandler={handleCloudPress} />
-        <MainButton 
-          buttonImage={require('../assets/images/icons/office-image.png')}
-          buttonText={'email'}
-          onPressHandler={handleOfficePress} />
-        <MainButton 
-          buttonImage={require('../assets/images/icons/git.png')}
-          buttonText={'git'}
-          onPressHandler={handleGitPress} />
-    </MainScreen>
-  );
+	return (
+		<MainScreen
+			screenTitle='services'
+			typewriterText='Connect with crypto enthusiasts'
+		>
+			<MainButton
+				buttonImage={require('../assets/images/icons/forum-image.png')}
+				buttonText={'forum'}
+				onPressHandler={handleForumPress}
+			/>
+			<MainButton
+				buttonImage={require('../assets/images/icons/market-image.png')}
+				buttonText={'market'}
+				onPressHandler={handleMarketPress}
+			/>
+			<MainButton
+				buttonImage={require('../assets/images/icons/cloud-image.png')}
+				buttonText={'cloud'}
+				onPressHandler={handleCloudPress}
+			/>
+			<MainButton
+				buttonImage={require('../assets/images/icons/office-image.png')}
+				buttonText={'email'}
+				onPressHandler={handleOfficePress}
+			/>
+			<MainButton
+				buttonImage={require('../assets/images/icons/git.png')}
+				buttonText={'git'}
+				onPressHandler={handleGitPress}
+			/>
+		</MainScreen>
+	);
 }
 
 HomeScreen.navigationOptions = {
-  header: null,
+	header: null,
 };
 
 function handleGitPress() {
-  WebBrowser.openBrowserAsync(
-    'https://git.crypto.ba/'
-  );
+	WebBrowser.openBrowserAsync('https://git.crypto.ba/');
 }
 
 function handleCloudPress() {
-  WebBrowser.openBrowserAsync(
-    'https://oblak.crypto.ba'
-  );
+	WebBrowser.openBrowserAsync('https://oblak.crypto.ba');
 }
 
 function handleForumPress() {
-  WebBrowser.openBrowserAsync(
-    'https://crypto.ba'
-  );
+	WebBrowser.openBrowserAsync('https://crypto.ba');
 }
 
 function handleOfficePress() {
-  WebBrowser.openBrowserAsync(
-    'https://email.crypto.ba'
-  );
+	WebBrowser.openBrowserAsync('https://email.crypto.ba');
+}
+
+function handleMarketPress() {
+	WebBrowser.openBrowserAsync('https://rxcmarket.com');
 }

@@ -1,36 +1,31 @@
 {
-  "expo": {
-    "name": "Crypto.ba Dashboard",
-    "slug": "cryptoba",
-    "privacy": "public",
-    "platforms": [
-      "ios",
-      "android"
-    ],
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
-    "splash": {
-      "image": "./assets/images/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#01040D"
-    },
-    "updates": {
-      "fallbackToCacheTimeout": 0
-    },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
-    "ios": {
-      "supportsTablet": false,
-      "bundleIdentifier": "com.develoco.cryptoba",
-      "buildNumber": "1.0.0"
-    },
-    "android": {
-      "package": "com.develoco.cryptoba",
-      "versionCode": 2,
-      "permissions": []
-    },
-    "description": "Crypto.ba is a Balkan community of crypto enthusiasts, helping each other learn fundamentals of blockchain technologies. We share news, discuss algorithms, flag scammers and suspicios crypto projects, help each other spin up new masternodes, set up mining equipment, discuss trading strategies and more! We are here for the tech. Seriously."
-  }
+	"expo": {
+		"name": "Crypto.ba Dashboard",
+		"slug": "cryptoba",
+		"privacy": "public",
+		"platforms": ["ios", "android"],
+		"version": "1.2.0",
+		"orientation": "portrait",
+		"icon": "./assets/images/icon.png",
+		"splash": {
+			"image": "./assets/images/splash.png",
+			"resizeMode": "contain",
+			"backgroundColor": "#01040D"
+		},
+		"updates": {
+			"fallbackToCacheTimeout": 0
+		},
+		"assetBundlePatterns": ["**/*"],
+		"ios": {
+			"supportsTablet": false,
+			"bundleIdentifier": "com.develoco.cryptoba",
+			"buildNumber": "1.2.0"
+		},
+		"android": {
+			"package": "com.develoco.cryptoba",
+			"versionCode": 4,
+			"permissions": []
+		},
+		"description": "Crypto.ba is a Balkan community of crypto enthusiasts, helping each other learn fundamentals of blockchain technologies. We share news, discuss algorithms, flag scammers and suspicios crypto projects, help each other spin up new masternodes, set up mining equipment, discuss trading strategies and more! We are here for the tech. Seriously."
+	}
 }
