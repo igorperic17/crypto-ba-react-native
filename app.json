@@ -4,7 +4,7 @@
 		"slug": "cryptoba",
 		"privacy": "public",
 		"platforms": ["ios", "android"],
-		"version": "1.2.0",
+		"version": "1.3.0",
 		"orientation": "portrait",
 		"icon": "./assets/images/icon.png",
 		"splash": {
@@ -19,11 +19,11 @@
 		"ios": {
 			"supportsTablet": false,
 			"bundleIdentifier": "com.develoco.cryptoba",
-			"buildNumber": "1.2.0"
+			"buildNumber": "1.3.0"
 		},
 		"android": {
 			"package": "com.develoco.cryptoba",
-			"versionCode": 4,
+			"versionCode": 5,
 			"permissions": []
 		},
 		"description": "Crypto.ba is a Balkan community of crypto enthusiasts, helping each other learn fundamentals of blockchain technologies. We share news, discuss algorithms, flag scammers and suspicios crypto projects, help each other spin up new masternodes, set up mining equipment, discuss trading strategies and more! We are here for the tech. Seriously."

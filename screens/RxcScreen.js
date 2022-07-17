@@ -45,7 +45,7 @@ RxcScreen.navigationOptions = {
 };
 
 function handleRxcPress() {
-	WebBrowser.openBrowserAsync('https://rxc.crypto.ba');
+	WebBrowser.openBrowserAsync('https://rxc.ba');
 }
 
 function handleWalletPress() {

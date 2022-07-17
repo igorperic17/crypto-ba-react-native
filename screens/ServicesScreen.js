@@ -30,8 +30,8 @@ export default function HomeScreen() {
 				onPressHandler={handleOfficePress}
 			/>
 			<MainButton
-				buttonImage={require('../assets/images/icons/git.png')}
-				buttonText={'git'}
+				buttonImage={require('../assets/images/icons/trader-image.png')}
+				buttonText={'exchange'}
 				onPressHandler={handleGitPress}
 			/>
 		</MainScreen>
@@ -43,7 +43,7 @@ HomeScreen.navigationOptions = {
 };
 
 function handleGitPress() {
-	WebBrowser.openBrowserAsync('https://git.crypto.ba/');
+	WebBrowser.openBrowserAsync('https://trade.crypto.ba/');
 }
 
 function handleCloudPress() {

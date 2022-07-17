@@ -31,7 +31,7 @@ export default function HomeScreen() {
 			<Text
 				style={[
 					styles.contentText,
-					{ textDecorationLine: 'underline', marginTop: 30 },
+					{ textDecorationLine: 'underline', marginTop: 5 },
 				]}
 				onPress={() => Linking.openURL('https://discord.gg/TY75KS8UFj')}
 			>
@@ -40,7 +40,7 @@ export default function HomeScreen() {
 			<Text
 				style={[
 					styles.contentText,
-					{ textDecorationLine: 'underline', marginTop: 20 },
+					{ textDecorationLine: 'underline', marginTop: 5 },
 				]}
 				onPress={() =>
 					Linking.openURL('https://t.me/joinchat/StKdh9PlvptnYpie')
@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
 	contentText: {
 		color: 'white',
 		textAlign: 'right',
-		fontSize: 12,
+		fontSize: 11,
 		fontFamily: 'Menlo-Regular',
 		borderColor: 'white',
 		// borderWidth: 1,
