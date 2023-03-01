@@ -16,6 +16,11 @@ export default function RxcScreen() {
 				onPressHandler={handleRxcPress}
 			/>
 			<MainButton
+				buttonImage={require('../assets/images/icons/games-image.png')}
+				buttonText={'games'}
+				onPressHandler={handleGamesPress}
+			/>
+			<MainButton
 				buttonImage={require('../assets/images/icons/explorer-image.png')}
 				buttonText={'explorer v1'}
 				onPressHandler={handleExplorerPress}
@@ -31,11 +36,6 @@ export default function RxcScreen() {
 				buttonText={'trade'}
 				onPressHandler={handleTradePress}
 			/>
-			<MainButton
-				buttonImage={require('../assets/images/icons/games-image.png')}
-				buttonText={'games'}
-				onPressHandler={handleGamesPress}
-			/>
 		</MainScreen>
 	);
 }
@@ -45,7 +45,7 @@ RxcScreen.navigationOptions = {
 };
 
 function handleRxcPress() {
-	WebBrowser.openBrowserAsync('https://rxc.ba');
+	WebBrowser.openBrowserAsync('https://rxc.crypto.ba');
 }
 
 function handleWalletPress() {
